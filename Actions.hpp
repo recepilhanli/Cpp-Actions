@@ -29,12 +29,10 @@ public:
         }
     }
 
-
     void AddListener(const std::function<void(Args...)>& func)
     {
         Listeners.push_back(func);
     }
-
 
     void RemoveListener(const std::function<void(Args...)>& func)
     {
@@ -50,7 +48,6 @@ public:
         }
     }
 
-
     void operator += (const std::function<void(Args...)>& func) {
         AddListener(func);
     }
@@ -64,9 +61,5 @@ public:
     {
         Invoke(args...);
     }
-
-
-
-  
 };
 
